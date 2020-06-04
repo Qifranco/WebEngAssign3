@@ -1,10 +1,10 @@
-//gloale variabeln
+//gloale variabeln, alle Daten, welche mit GET - Request abgerufen wurden
 kostenData = [];
 reingewinnData = [];
 finanzkennzahlenData = [];
 durchlaufzeitData = [];
 
-//Finanzkennzahlen
+//Finanzkennzahlen - component
 var kennzahlen = Vue.component('app-kennzahlen-component', {
     template: `
     <div>
@@ -58,7 +58,7 @@ var kennzahlen = Vue.component('app-kennzahlen-component', {
 })
 var app
 
-// navigation graph kosten component
+//  graph Kosten component (in Alle Standorte) - component
 var appKosten = Vue.component('app-graph-kosten-component', {
     template:
         `
@@ -71,7 +71,7 @@ var appKosten = Vue.component('app-graph-kosten-component', {
         chartKosten();
     }
 })
-// graph reingewinn in wiedikon komponent
+// graph reingewinn (in Wiedikon) - component
 var appReingewinn = Vue.component('app-graph-reingewinn-component', {
     template:
         `
@@ -84,7 +84,7 @@ var appReingewinn = Vue.component('app-graph-reingewinn-component', {
         chartReingewinn()
     }
 })
-//graph durchlaufzeit in alle componenten
+//graph durchlaufzeit (in Alle Standorte) - component
 var appDurchlaufzeit = Vue.component('app-graph-durchlaufzeit-component', {
     template:
         `<canvas id="Durchlaufzeit" title="Durchlaufzeit"></canvas>`,
@@ -96,6 +96,7 @@ var appDurchlaufzeit = Vue.component('app-graph-durchlaufzeit-component', {
     }
 
 })
+//graph BCG Matrix in Alle Standorte component
 var appMatrix = Vue.component('app-graph-component-matrix', {
     template:
         `
@@ -120,7 +121,7 @@ const router = new VueRouter({
         ]
 })
 
-// graph component 
+// Bild - graph- component 
 Vue.component('graph-component', {
     props: ['picture'],
     template:
@@ -169,7 +170,7 @@ var app = new Vue({
 })
 
 
-//Datetime
+// Funktion Datetime
 uhrzeit();
 function uhrzeit() {
     var akt = new Date(),
@@ -181,6 +182,7 @@ function uhrzeit() {
     document.getElementById('aktuelleZeitlab').innerHTML = hours + ':' + minutes + ':' + seconds;
     setTimeout(uhrzeit, 500);
 }
+// Funktion 0 hinzufügen
 function timeNull(zahl) {
     zahl = (zahl < 10 ? '0' : '') + zahl;
     return zahl;
@@ -196,6 +198,10 @@ $(document).ready(function () {
     });
 });
 
+//Funktionen: Erstellung/ 'NEW CHART' von allen Graphen
+
+
+//Erstellung Kosten
 function chartKosten() {
     // CHART KOSTEN
     axios.get("http://localhost:8080/chartKostenDaten")
@@ -248,6 +254,8 @@ function chartKosten() {
         }
     });
 }
+
+//Erstellung Reingewinn
 function chartReingewinn() {
     // CHART REINGEWINN
     axios.get("http://localhost:8080/chartReingewinnDaten")
@@ -298,6 +306,7 @@ function chartReingewinn() {
         }
     });
 }
+// Erstellung Durchlaufzeit
 function chartDurchlaufzeit() {
     axios.get("http://localhost:8080/durchlaufzeitData")
         .then(response => {
@@ -351,6 +360,8 @@ function chartDurchlaufzeit() {
         }
     });
 }
+
+//Erstellung BCG Matrix
 function chartMatrix() {
     //CHART BCG MATRIX
     var ctx = document.getElementById("BCGMatrix");
