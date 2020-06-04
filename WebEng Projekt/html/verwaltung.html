@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <!-- include the jQuery UI style sheet-->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <!-- include jQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include jQuery UI-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <!-- Bootsrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/css/verwaltung.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12">
+
+           
+
+
+            <p lang="de">Guten Tag Herr Ayverdi,
+                Was wünschen Sie heute?</p>
+            <p lang="en">Good afternoon Mr Ayverdi,
+                What do you want to do today?</p>
+
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <form action="/html/main.html" lang="de">
+                    <input class="button" type="submit" value="Zurück" lang="de" title="Zurück zur Hauptseite"/>
+                </form>
+                <button class="button" type="button" lang="de" title="noch nicht implementiert">Grafenauswahl</button>
+                <button class="button" type="button" lang="de" title="noch nicht implementiert">Finanzkennzahlenauswahl</button>
+                <button class="button" type="button" lang="de" title="noch nicht implementiert">neuer Standort</button>
+                <form action="/html/main.html" lang="en">
+                    <input class="button" type="submit" value="Back" lang="en" title="Back to the main page"/>
+                </form>
+                <button class="button" type="button" lang="en" title="not implemented">Graph selection</button>
+                <button class="button" type="button" lang="en" title="not implemented">Selection of financial key figures</button>
+                <button class="button" type="button" lang="en" title="not implemented">New Location</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <form action="" method="get">
+        <label for="lang-switch">
+            <span lang="en">Language</span>
+            <span lang="de">Sprache</span>
+        </label>
+        <select id="lang-switch">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+        </select>
+    </form>
+    <script src="/js/verwaltung.js"></script>
+</body>
+
+</html>

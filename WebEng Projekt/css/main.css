@@ -1,0 +1,67 @@
+.button {
+	box-shadow: 0px 0px 0px 2px #000000;
+	background-color:transparent;
+	border-radius:10px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:12px;
+	padding:10px 37px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #000000;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.button:hover {
+	background-color:transparent;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.col-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-3{
+    border-color:black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrollpart {
+    width:240px;
+    height:205px;
+    line-height:3em;
+    overflow:auto;
+    padding:5px;
+}
+.box {
+    border: 0px;
+    width: 100%;
+    margin: 50px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.kennzahlen {
+    border: 1px solid black;
+    border-spacing: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button {
+    background: href=image(src)
+}
+.col-4{
+    border: 1px solid black;
+    justify-content: center;
+   
+}

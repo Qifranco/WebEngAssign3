@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/login.css" type="text/css"></link>
+</head>
+<body>
+
+  <div class="container1">
+    <h1>Ayverdi's Management Cockpit</h1>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Anmelden</button>
+  </div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src=/pictures/ayverdis_logo.png alt="Avatar" class="avatar">
+
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Benutzername</b></label>
+      <input type="text" placeholder="Benutzername eingeben" name="uname" required>
+
+      <label for="psw"><b>Passwort</b></label>
+      <input type="password" placeholder="Passwort eingeben" name="psw" required>
+        
+      <input type="button" onclick="location.href='/html/main.html'" value="Anmelden">
+     </div>
+
+    </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
