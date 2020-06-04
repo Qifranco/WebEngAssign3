@@ -1,4 +1,4 @@
-//gloale variabeln, alle Daten, welche mit GET - Request abgerufen wurden
+//gloale variabeln, alle Daten, welche mit GET - Request befüllt werden
 kostenData = [];
 reingewinnData = [];
 finanzkennzahlenData = [];
@@ -56,7 +56,6 @@ var kennzahlen = Vue.component('app-kennzahlen-component', {
         }
     }
 })
-var app
 
 //  graph Kosten component (in Alle Standorte) - component
 var appKosten = Vue.component('app-graph-kosten-component', {
@@ -96,7 +95,7 @@ var appDurchlaufzeit = Vue.component('app-graph-durchlaufzeit-component', {
     }
 
 })
-//graph BCG Matrix in Alle Standorte component
+//graph BCG Matrix (in Alle Standorte) - component
 var appMatrix = Vue.component('app-graph-component-matrix', {
     template:
         `
@@ -112,7 +111,7 @@ var appMatrix = Vue.component('app-graph-component-matrix', {
 })
 
 
-// component router
+// component vue router
 const router = new VueRouter({
     routes:
         [
@@ -170,7 +169,7 @@ var app = new Vue({
 })
 
 
-// Funktion Datetime
+// Funktion Datetime &  ausführen Funktion Uhrzeit
 uhrzeit();
 function uhrzeit() {
     var akt = new Date(),
@@ -312,7 +311,7 @@ function chartDurchlaufzeit() {
         .then(response => {
             durchlaufzeitData = response.data.zahlen;
         })
-    //CHART KUNDENZUFRIEDENHEIT
+    //CHART DURCHLAUFZEIT
     var ctx = document.getElementById("Durchlaufzeit");
     var Durchlaufzeit = new Chart(ctx, {
         type: 'line',
