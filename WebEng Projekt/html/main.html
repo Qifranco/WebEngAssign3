@@ -27,9 +27,9 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class ="container-fluid">
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4">
                 <nav>
                     <router-link to="/All">{{alleStandortLab}}</router-link>
                     <router-link to="/Wiedikon">{{wiedikonLab}}</router-link>
@@ -37,10 +37,10 @@
                     <router-link to="">{{affolternLab}}</router-link>
                 </nav>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <img src="/pictures/ayverdis.png" alt="Logo">
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <div class="row">
                     <!--Nur diese Button in Englisch  -->
                     <form action="/html/verwaltung.html">
@@ -53,32 +53,32 @@
             </div>
         </div>
         <div class=row>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <span title="Finanzkennzahlen">
                     <app-kennzahlen-component></app-kennzahlen-component>
                 </span>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <router-view></router-view>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                     <app-graph-durchlaufzeit-component></app-graph-durchlaufzeit-component>
             </div>
         </div>
         <div class=row>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <!--<app-graph-reingewinn-component></app-graph-reingewinn-component>-->
                 <graph-component picture="/pictures/chart1.png"></graph-component>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <graph-component picture="/pictures/chart6.png"></graph-component>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
                 <app-graph-component-matrix></app-graph-component-matrix>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4">
                 <div id="aktuelleZeitlab" title="aktuelle Zeit"></div>
             </div>
         </div>
